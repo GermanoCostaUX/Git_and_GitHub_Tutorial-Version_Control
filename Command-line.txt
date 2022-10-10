@@ -1,0 +1,131 @@
+beskpa@beskpa-VJF155F11X-B2511B:~$ git --version
+git version 2.38.0
+beskpa@beskpa-VJF155F11X-B2511B:~$ git config --global user.name "YOUR_USERNAME"
+beskpa@beskpa-VJF155F11X-B2511B:~$ git config --global user.email "YOUR_EMAIL"
+beskpa@beskpa-VJF155F11X-B2511B:~$ git config user.name
+YOUR_USERNAME
+beskpa@beskpa-VJF155F11X-B2511B:~$ git config user.email
+YOUR_EMAIL
+beskpa@beskpa-VJF155F11X-B2511B:~$ cd Desktop
+beskpa@beskpa-VJF155F11X-B2511B:~/Desktop$ ls
+beskpa@beskpa-VJF155F11X-B2511B:~/Desktop$ cd ..
+beskpa@beskpa-VJF155F11X-B2511B:~$ cd Documents
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents$ ls
+ ALL FILES IN DOCUMENTS
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents$ mkdir Git-and-GitHub-Tutorial
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents$ cd Git-and-GitHub-Tutorial
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ ls
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git init
+Initialized empty Git repository in /home/beskpa/Documents/Git-and-GitHub-Tutorial/.git/
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git add .
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git commit -m "first commit"
+[main (root-commit) 839c46d] first commit
+ 1 file changed, 8 insertions(+)
+ create mode 100644 todo.txt
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git remote add origin https://github.com/GermanoCostaUX/Git_and_GitHub_Tutorial-Version_Control.git <ATTENTION: THE URL FOR YOUR REMOTE PROJECT SHOULD BE ENTIRELY DIFFERENT FROM THIS ONE>
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git branch -M main
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git push -u origin main
+Username for 'https://github.com': YOUR_GITHUB_NICKNAME
+Password for 'https://GermanoCostaUX@github.com': YOUR_SSH_KEY
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 335 bytes | 3.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/GermanoCostaUX/Git_and_GitHub_Tutorial-Version_Control.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   todo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git add .
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git commit -m "added new task"
+[main d7f7f55] added new task
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git push -u origin main
+Username for 'https://github.com': YOUR_USERNAME
+Password for 'https://GermanoCostaUX@github.com': YOUR_SSH_KEY
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 299.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/GermanoCostaUX/Git_and_GitHub_Tutorial-Version_Control.git
+   839c46d..d7f7f55  main -> main
+branch 'main' set up to track 'origin/main'.
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git checkout -b test
+Switched to a new branch 'test'
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git status
+On branch test
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   todo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git add .
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git commit -m "addes tasks to a newbranch -test"
+[test ad932d8] addes tasks to a newbranch -test
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git push -u origin test
+Username for 'https://github.com': YOUR_USERNAME
+Password for 'https://GermanoCostaUX@github.com': YOUR_SSH_KEY
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 460 bytes | 460.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/GermanoCostaUX/Git_and_GitHub_Tutorial-Version_Control/pull/new/test
+remote: 
+To https://github.com/GermanoCostaUX/Git_and_GitHub_Tutorial-Version_Control.git
+ * [new branch]      test -> test
+branch 'test' set up to track 'origin/test'.
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git branch
+* main
+  test
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git merge test
+Updating d7f7f55..ad932d8
+Fast-forward
+ todo.txt | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git checkout test
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ git push -u origin test
+Username for 'https://github.com': YOUR_USERNAME
+Password for 'https://GermanoCostaUX@github.com': YOUR_SSH_KEY
+branch 'test' set up to track 'origin/test'.
+Everything up-to-date
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents/Git-and-GitHub-Tutorial$ cd ..
+beskpa@beskpa-VJF155F11X-B2511B:~/Documents$ cd ..
+beskpa@beskpa-VJF155F11X-B2511B:~$ cd Desktop
+beskpa@beskpa-VJF155F11X-B2511B:~/Desktop$ git clone https://github.com/GermanoCostaUX/Git_and_GitHub_Tutorial-Version_Control.git
+Cloning into 'Git_and_GitHub_Tutorial-Version_Control'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 2), reused 8 (delta 1), pack-reused 0
+Receiving objects: 100% (10/10), done.
+Resolving deltas: 100% (2/2), done.
+beskpa@beskpa-VJF155F11X-B2511B:~/Desktop$ 
